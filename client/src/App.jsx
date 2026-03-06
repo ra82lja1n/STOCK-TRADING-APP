@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import {Routes, Route} from 'react-router-dom'; 
+import Home from './pages/Home.jsx';
+import Landing from './pages/Landing.jsx';
+import LoginProtector from './RouteProtectors/AuthProtector.jsx';
+import AuthProtector from './RouteProtectors/LoginProtector.jsx';
+import Admin from './pages/Admin.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import History from './pages/History.jsx';
+import Profile from './pages/Profile.jsx';
+import Navbar from './components/Navbar.jsx';
+import StockChart from './pages/StockChart.jsx';
+import Users from './pages/Users.jsx'
+import AllOrders from './pages/AllOrders.jsx'
+import AllTransactions from './pages/AllTransactions.jsx'
+import AdminStockChart from './pages/AdminStockChart.jsx';
+
+import { Toaster } from 'react-hot-toast';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    <div className="App">
+
+
+      <Navbar />
+     
+
+      <Routes>
+        <Route exact path='' element={<LoginProtector> <Landing /> </LoginProtector> } />
+        <Route  path='/home' element={<AuthProtector><Home /></AuthProtector>} />
+        <Route  path='/portfolio' element={<AuthProtector><Portfolio /></AuthProtector>} />
+        <Route  path='/history' element={<AuthProtector><History /></AuthProtector>} />
+        <Route  path='/profile' element={<AuthProtector><Profile /></AuthProtector>} />
+        <Route  path='/stock/:id' element={<AuthProtector><StockChart /></AuthProtector>} />
+
+        <Route  path='/admin' element={ <AuthProtector><Admin /></AuthProtector>} />
+        <Route  path='/users' element={ <AuthProtector><Users /></AuthProtector>} />
+        <Route  path='/all-orders' element={ <AuthProtector><AllOrders /></AuthProtector>} />
+        <Route  path='/all-transactions' element={ <AuthProtector><AllTransactions /></AuthProtector>} />
+        <Route  path='/admin-stock/:id' element={<AuthProtector><AdminStockChart /></AuthProtector>} />
+      </Routes>
+      <Toaster />
+    </div>
+  );
 }
 
-export default App
+export default App;
