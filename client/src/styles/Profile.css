@@ -111,43 +111,59 @@
 
 }
 
-.profileTransactions{
-    width: 60%;
-    height: 37vh;
+/* 1. Expand the main container to use more space */
+.profileTransactions {
+    width: 100%; /* Changed from 60% to 100% */
+    max-width: 900px; /* Optional: adds a limit so it doesn't get TOO wide on ultra-wide screens */
+    height: 45vh; /* Slightly increased height to see more history */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Increased gap between cards */
     overflow-y: scroll;
-    -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
-.profileTransactions::-webkit-scrollbar {
-    display: none;
-  }
 
-.profileTransaction{
+/* 2. Make the individual card larger and more spacious */
+.profileTransaction {
     display: flex;
-    background-color: #f4f6fbc1;
-    padding: 10px 40px;
+    background-color: #ffffff; /* Brighter white makes it feel larger/cleaner */
+    padding: 20px 40px; /* Increased vertical padding from 10px to 20px */
     align-items: center;
     justify-content: space-between;
     border-radius: 1rem;
-    border: 1px solid #2f3c762e;
+    border: 1px solid #2f3c761a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02); /* Added subtle shadow for depth */
+    transition: transform 0.2s ease;
 }
 
-.profileTransaction span{
-    text-align: center;
-    
+/* 3. Adjust the text alignment for the expanded width */
+.profileTransaction span {
+    text-align: left; /* Left align usually looks better on wider cards */
+    flex: 1; /* This forces all spans to take equal width, spreading them out perfectly */
 }
 
-.profileTransaction span h6{
-    margin: 0;
-    font-size: 0.8rem;
+/* Center the last item (Time) or keep it right-aligned */
+.profileTransaction span:last-child {
+    text-align: right;
+}
+
+.profileTransaction span h6 {
+    margin-bottom: 4px; /* Space between label and value */
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: #394b9d8c;
 }
 
-.profileTransaction span p{
+.profileTransaction span p {
     margin: 0;
-    font-size: 1.1rem;
-    color: #394b9d;
+    font-size: 1.2rem; /* Increased font size for the actual data */
+    font-weight: 500;
+    color: #2f3c76;
+}
+
+/* Hover effect to make it feel interactive */
+.profileTransaction:hover {
+    background-color: #f8faff;
+    border-color: #3F5BD9;
 }

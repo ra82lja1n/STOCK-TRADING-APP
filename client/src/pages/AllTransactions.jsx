@@ -38,7 +38,7 @@ const AllTransactions = () => {
                       <span>
                         <h6>Transaction Id</h6>
                         <p>{transaction._id}</p>
-                      </span>
+                      </span> 
                       <span>
                         <h6>User Id</h6>
                         <p>{transaction.user}</p>

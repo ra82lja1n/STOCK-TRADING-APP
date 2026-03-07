@@ -13,7 +13,7 @@
     margin: 0 auto;
     border-radius: 0.6rem;
 }
-.all-orders-container-head{
+.all-orders-container-head{ 
     display: flex;
     align-items: center;
     justify-content: space-between;
