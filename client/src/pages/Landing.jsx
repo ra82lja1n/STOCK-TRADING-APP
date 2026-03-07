@@ -38,10 +38,10 @@ const Landing = () => {
                 </div>
 
 
-                <div className="landing-hero-image">
+                <div className="landing-hero-image">  
                     
                         <img src={HeroImg} alt="" />
-                   
+                    
                 </div>
             </div>
 
