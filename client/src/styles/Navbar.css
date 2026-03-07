@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2vw;
+    padding: 0 0.5vw;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -20,13 +20,18 @@
 .nav-options{
     display: flex;
     gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .nav-options p{
     margin: 0;
+    padding: 8px 12px;
     color: rgb(209, 210, 211);
     text-decoration: none;
     cursor: pointer;
+    white-space: nowrap;
+    font-size: 0.95rem;
 }
 
 .nav-options p:hover{

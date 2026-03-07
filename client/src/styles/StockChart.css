@@ -1,12 +1,17 @@
 .stockPage{
-    padding-top: 12vh;
+    width: 100%;
+    padding: 12vh 0;
     display: flex;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #fafafa;
+    min-height: 90vh;
 }
 
 .stockChart{
     height: 80vh;
     width: 67%;
-    margin-left: 3vw;
+    margin: 0;
 }
 
 .stockChartActions{

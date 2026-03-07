@@ -1,10 +1,15 @@
 .adminStockPage{
-    padding-top: 12vh;
+    width: 100%;
+    padding: 12vh 0;
     display: flex;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #fafafa;
+    min-height: 90vh;
 }
 
 .adminStockChart{
     height: 80vh;
     width: 90%;
-    margin-left: 3vw;
+    margin: 0;
 }

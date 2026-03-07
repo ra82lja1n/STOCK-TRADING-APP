@@ -1,12 +1,16 @@
 .portfolioPage{
-    padding-top: 13vh;
+    padding: 13vh 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
 }
 
 .user-portfolio-container{
     width: 90%;
+    max-width: 1200px;
     height: 85vh;
-    margin-left: 5%;
+    margin: 0 auto;
     border-radius: 0.6rem;
 }
 .user-portfolio-container-head{

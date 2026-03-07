@@ -1,16 +1,21 @@
 .homePage{
+    width: 100%;
     height: fit-content;
-    padding-top: 10vh;
+    min-height: 100vh;
+    padding: 10vh 2vw;
     display: flex;
+    justify-content: center;
+    gap: 2vw;
+    background-color: #fafafa;
 }
 
 
 .trending-stocks-container{
-    width: 30%;
+    width: 25%;
     border-right: 2px solid #354c611e;
-    height: 90vh;
+    min-height: 90vh;
     border-radius: 0.6rem;
-
+    padding: 0 1vw;
 }
 
 .trending-stocks-container h2{
@@ -68,11 +73,11 @@
 
 
 .all-stocks-container{
-    width: 70%;
-    height: 90vh;
+    width: 65%;
+    min-height: 90vh;
     border-left: 2px solid #354c611e;
-    height: 90vh;
     border-radius: 0.6rem;
+    padding: 0 1vw;
 }
 .all-stocks-container-head{
     display: flex;

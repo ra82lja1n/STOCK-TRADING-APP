@@ -1,7 +1,12 @@
 .adminPage{
+    width: 100%;
     height: fit-content;
-    padding-top: 10vh;
+    min-height: 100vh;
+    padding: 10vh 2vw;
     display: flex;
+    gap: 2vw;
+    justify-content: center;
+    background-color: #fafafa;
 }
 
 
@@ -71,8 +76,8 @@
     width: 70%;
     height: 90vh;
     border-left: 2px solid #354c611e;
-    height: 90vh;
     border-radius: 0.6rem;
+    padding: 0 1vw;
 }
 .all-stocks-container-head{
     display: flex;
